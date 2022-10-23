@@ -27,12 +27,10 @@
                 [#if vizitka.celaAdresa?has_content]
 
                     <div>${vizitka.ulice}</div>
-                    <div><span>${vizitka.obecPsc}</span>
-                    </div>
+                    <div><span>${vizitka.obecPsc}</span></div>
                 [/#if]
             </div>
         </div>
-
         <div class="kontakty">
             [#if vizitka.email?has_content]
                 <div><i class="las la-at"></i> <span>${vizitka.email}</span></div>
@@ -46,12 +44,14 @@
                 <div><i class="las la-globe"></i> <span>${vizitka.web}</span></div>
             [/#if]
 
-            <div class="mapa">
-                <iframe style="border:none" src="https://frame.mapy.cz/?q=${vizitka.celaAdresa}" width="100%"
-                        height="100%" frameborder="0"></iframe>
 
-
-            </div>
         </div>
+    </div>
+
+    <div class="mapa">
+        <iframe style="border:none" src="https://frame.mapy.cz/?q=${vizitka.celaAdresa}" width="100%"
+                height="100%" frameborder="0"></iframe>
+    </div>
+</div>
 </body>
 </html>
